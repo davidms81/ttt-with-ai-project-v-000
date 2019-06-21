@@ -33,6 +33,11 @@ class Game
   end
 
   def draw?
+    if !won? && full?
+      true
+    else
+      false
+    end
   end
 
   def over?
