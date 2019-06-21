@@ -60,6 +60,13 @@ class Game
   end
 
   def turn
+    player = current_player
+    player_move = current_player.move(board.cells)
+    if board.valid_move?(player_move)
+      board.update(player_move, player)
+    else
+      turn
+    end
   end
 
   def play
