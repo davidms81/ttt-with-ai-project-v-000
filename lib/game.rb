@@ -27,6 +27,9 @@ class Game
   end
 
   def won?
+    WIN_COMBINATIONS.detect do |combination|
+      board.cells[combination[0]] == "X" && board.cells[combination[1]] == "X" && board.cells[combination[2]] == "X" || board.cells[combination[0]] == "O" && board.cells[combination[1]] == "O" && board.cells[combination[2]] == "O"
+    end
   end
 
   def draw?
