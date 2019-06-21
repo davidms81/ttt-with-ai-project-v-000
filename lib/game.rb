@@ -49,6 +49,14 @@ class Game
   end
 
   def winner
+    if won?
+      combination = won?
+      if board.cells[combination[0]] == "X"
+        return "X"
+      else
+        return "O"
+      end
+    end
   end
 
   def turn
