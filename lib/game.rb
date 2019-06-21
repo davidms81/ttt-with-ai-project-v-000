@@ -33,7 +33,7 @@ class Game
   end
 
   def draw?
-    if !won? && full?
+    if !won? && board.full?
       true
     else
       false
